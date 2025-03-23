@@ -1,34 +1,16 @@
 const readline = require('readline-sync');
 
-function validatePassword(password) {
-    // Check if the password is at least 8 characters long
-    if (password.length < 8) {
-        return false;
-    }
-    
-    // Check if the password contains at least one uppercase letter
-    if (!/[A-Z]/.test(password)) {
-        return false;
-    }
-    
-    // Check if the password contains at least one number
-    if (!/[0-9]/.test(password)) {
-        return false;
-    }
-    
-    return true;
-}
+let groceryItems = ["apples", "bananas", "milk", "bread", "eggs"];
 
-let password;
+let prices = [1.99, 2.49, 3.99];
 
-do {
-    // Prompt the user for a password
-    password = readlineSync.question('Enter a password: ');
+console.log(groceryItems);
 
-    // Validate the password
-    if (validatePassword(password)) {
-        console.log('Password is valid! You have successfully set your password.');
-    } else {
-        console.log('Password does not meet the requirements. Please try again.');
-    }
-} while (!validatePassword(password));  // Repeat if the password is invalid
+console.log(prices);
+
+console.log(groceryItems[0]); // apples
+console.log(groceryItems[2]); // milk
+console.log(groceryItems[4]); // eggs
+
+console.log(prices[0]); // 1.99
+console.log(prices[2]); // 3.99
